@@ -1,0 +1,373 @@
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+list-style: none;
+}
+#hide {
+transform: scale(0);
+display:none;
+}
+.show {
+animation: rollin 1s forwards;
+}
+body{background-color:rgb(26,24.5,28);
+color: snow;
+}
+#global{
+color: #6cf;
+height: 100vh;
+width: 100%;
+padding: 2px;
+box-shadow: 0px 0px 4px rgb(36,34.5,38) inset,
+0px 0px 4px rgb(36,34.5,38) inset,
+0px 0px 4px rgb(36,34.5,38) inset;
+background-color:black;
+padding:0px;
+}
+#pipe{
+position:relative;
+top: 0;left:0;right:0; bottom:0;
+background-color: rgb(36,34.5,38);
+z-index: 0;
+padding: 0px;
+height: calc(100vh - 2px);
+width: calc(100% - 2px);
+margin: 0px;
+}
+#shadow {
+position:fixed;
+margin-top:6%;
+height: 20rem;
+width:40%;
+right:0;
+transform:scale(0);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:space-around;
+background-color:rgb(36,34.5,38);
+border:2px #6cf solid;
+}
+.shadow > p {
+font-size: 15px;
+width:100%;
+text-align:center;
+height:100%;
+padding:7px;
+}
+.shadow > p:hover {
+background-color: grey;
+}
+.shadow > p > span {
+margin:auto;
+width:100%;
+height:100%;
+background-color:rgb(36,34.5,38);
+font-weight:900;
+}
+.shadow > p > span:hover {
+background-color: grey;
+}
+
+/*
+
+*/
+
+#doc {
+width: 100%;
+height:24px !important;
+color: white;
+background-color: grey;
+display:flex;
+box-shadow: 0px 0px 8px black inset;
+position:fixed;
+z-index:10;
+}
+#doc .logo{
+text-transform: uppercase;
+font-size: clamp(12px,18px,45px);
+font-family: verdana;
+font-weight: 700;
+background-color: #6cf;
+box-shadow: 0px 0px 8px black inset,
+-48px 0px 0px dimgrey inset;
+color: #6cf;
+text-shadow: 0px 0px 6px snow,
+0px 0px 2px snow inset,
+0px 0px 4px snow inset;
+padding:2px;
+text-shadow: 1px 1px 1px #8a8989,
+1px 2px 1px #919191,
+    1px 10px 20px rgba(16,16,16,0.4);
+}
+#doc-title {
+position:relative;
+max-width:10rem !important;
+min-width: 5rem !important;;
+max-height: 1.4rem !important;
+outline-color: #6cf;
+}
+.ball{
+width: 12px;
+height:12px;
+border-radius: 50%;
+border: 2px snow solid;
+margin:auto 2px;
+}
+.yuy1{background-color: red;}.yuy2{background-color: #6cf;}.yuy3{background-color: yellow;}
+#doc-title{
+margin: auto;
+}
+#menu {
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+z-index:6;
+width:100%;
+border-bottom:0px black solid;
+background-color: rgb(36,34.5,38);
+}
+.merge {
+display:flex;
+width: 100%;
+height:36px;
+border:red 0px solid;
+box-shadow: 0px 0px 3px grey inset;
+display: flex-box;
+padding-left:9.2%;
+justify-content:center;
+align-items:center;
+}
+.merge .plates {
+display:flex;
+align-items:center;
+justify-content:center;
+width:10%;
+height:60%;
+font-size: clamp(10px,20px,30px);
+line-height:50px;
+margin:auto;
+padding:0px;
+}
+.merge .plates:hover {
+background-color:white;
+}
+#tabb {
+transform:rotate(90deg);
+border:0px red solid;
+padding:0px;
+margin-left:18px;
+}
+#des {
+width:60%;
+height:40%;
+display:none;
+}
+.ccc{
+width:100%;
+max-height:100%;
+opacity:0;
+margin:0px;
+padding:0px;
+}
+#menu #klicker{
+height: 32px;
+width: 32px;
+position:fixed;
+transform: rotate(90deg);
+top:94%;
+left:0px;
+z-index: 6;
+font-size: 30px;
+background-color:transparent;
+font-size:32px;
+text-shadow: 0px 0px 5px black,
+0px 0px 5px black inset;
+border:0px red solid;
+/*font-weight:600;*/
+}
+#menu #klicker::after{
+content: "";
+position:absolute;
+z-index:-1;
+height: 36px;
+width: 32px;
+left:-5px;
+right:6px;
+background-color: rgb(36,34.5,38);
+border-radius:40% 40% 10% 10%;
+margin:auto;
+}
+
+@keyframes rollin {
+from{
+transform:scaleZ(0.90);
+width:180px;
+box-shadow:2px 0px 10px #6cf;
+}
+to{ transform:scaleX(1);
+width:160px;}}
+#menu #content {
+padding-top: 7.4%;
+display: flex;
+flex-direction:column;
+position:fixed;
+left: 0px;
+top: 0px;
+z-index:5;
+background-color: rgb(66,64.5,68);
+width:140px;
+height: clamp(31.8rem,31.8rem,67rem);
+transform: scale(0);
+border: #6cf 1px solid;
+}
+#menu #content #options {
+width: 150px;
+height:100%;
+font-size: 20px;
+border-bottom: #6cf 1px solid;
+margin: 0px;
+text-align:center;
+}
+#menu #content #options:hover {
+color:black;
+background-color: #6cf;
+transition: all 0.5s;
+}
+#more {
+color:black;
+text-shadow: 0px 0px 6px #6cf,
+0px 0px 12px #6cf,
+0px 0px 8px #6cf;
+font-size:20px;
+transform:rotate(90deg);
+font-weight:900;
+/*margin-left:10px;*/
+}
+#editor {
+border:0px red solid;
+outline:none;
+background-color: rgb(36,34.5,38);
+  position: fixed;
+  top:5%;
+  left: 0; right: 0;
+   bottom: 0;
+  height: 100%;
+}
+
+
+
+
+
+
+/* for the setting area */
+
+
+.settings{
+position:fixed;
+width:100%;
+height:100%;
+z-index:101;
+transform:scale(0);
+background-color:rgb(26,24.5,28);
+color:snow;
+}
+.container {
+position:relative;
+font-size:17px;
+top:7%;
+height:100%;
+width:100%;
+padding:4px;
+}
+.settings .container .article{
+height:100%;
+width:90%;
+color:grey;
+}
+#doc-titlex{
+display:flex;
+align-items:center ;
+font-weight:600;
+border:0px black solid;
+font-size:14px;
+
+}
+#morex {
+color: black;
+position:relative;
+right:0px;
+text-shadow: 0px 0px 6px #6cf,
+0px 0px 12px #6cf,
+0px 0px 8px #6cf;
+font-size: 20px;
+transform:rotate(50deg);
+font-weight:600;
+margin-left:10px;
+}
+#do {
+display:flex;
+align-items:center;
+padding:0px;
+}
+.settings .container .tab  {
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:0px 0px 0px 8px;
+margin:10px 0px;
+}
+.settings .container .tab:hover {
+color:white;
+}
+.tab #setting,
+.tab #value
+{
+align-content:center;
+justify-content:center;
+width:100%;
+margin:8px 0px;
+
+}
+.tab #value{
+display:flex ;
+margin-left:30%;
+border:0px red solid;
+justify-content:flex-end;
+padding:2px 4px;
+}
+.tab #value select, .tab #value button {
+outline:none;
+background-color:grey ;
+border-radius:6px;
+}
+
+.tab #setting{
+/*box-shadow:0px 0px 2px dimgrey,
+0px 0px 4px dimgrey,
+0px 0px 6px dimgrey;*/
+border-radius:5px;
+display:flex;
+justify-content:center;
+align-items:center;
+color:grey;
+height:100%;
+}
+.tab {
+box-shadow:0px 0px 4px black inset;
+box-shadow:0px 0px 2px grey inset, 
+            5px -1px 3px grey;
+border-radius:10px;
+}
+.tab #value {
+width:100%;
+border-radius:4px;
+box-shadow: 1px 1px 5px #6cf, 
+            -1px -1px 5px #6cf;
+}
+.tab #value:hover {
+box-shadow: 1px 1px 5px grey, 
+            -1px -1px 5px grey;
+}

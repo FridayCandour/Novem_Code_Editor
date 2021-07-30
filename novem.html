@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; " />
+<meta name="description" content="novem code editor"/>
+<meta name="keywords" content="novem code editor" />
+<meta name="publisher" content="uiedbook" />
+<meta name="version" content="1.0" />
+<meta name="lincence" content="BSD" />
+<meta name="type" content="free-version" />
+<title>Novem code editor</title>
+<script src="uiedbook.js"></script>
+<link rel="stylesheet" href="novem.css">
+<script src="novem.js"></script>
+<!-- Required Ace Libraries -->
+  <script src="lib/js/ace-editor/src-min/ace.js"></script>
+  <script src="lib/js/ace-editor/src-min/mode-javascript.js"></script>
+  <script src="lib/js/ace-editor/src-min/ext-language_tools.js"></script>
+  <script src="lib/js/ace-editor/src-min/theme-ambiance.js"></script>
+  <script src="lib/js/ace-editor/src-min/ext-emmet.js"></script>
+  <script src="lib/js/ace-editor/src-min/ext-beautify.js"></script>
+  
+
+  <!-- Custom Scripts -->
+</head>
+<body>
+<!--
+The novem code editor is light-weight
+but yet powerful code editor built with
+the javascript uiedbook and 
+ace libraries.
+ -->
+<!--
+The novem code editor
+settings ui interface 
+ -->
+<div class="settings">
+<div id="doc"> <span class="logo">Novem Code</span>
+  <div class="ball yuy1"></div><div class="ball yuy2"></div><div class="ball yuy3"></div>
+   <p id="doc-titlex">customize your workspace</p>
+   <p id="morex">+</p>
+   
+</div>
+
+<div class="container"> 
+   <div class="tab">
+   <!-- key bindings file for users 
+   to put their own keys for use 
+   -->
+   <div id="setting">
+   <p>user Snippets</p>
+   </div>
+   <div id="value">
+  <button>open plugin</button> 
+   </div>
+   
+   </div>
+   
+   <div class="tab">
+   <!-- font-size and 
+   family choice
+   -->
+   
+   <div id="setting">
+   <p>Set Editor Font</p>
+   </div>
+   <div id="value">
+   <select>
+   <option>12</option>
+   <option>14</option>
+   <option>16</option>
+   <option>18</option>
+   <option>20</option>
+   <option>22</option>
+   <option>24</option>
+   <option>26</option>
+   <option>28</option>
+   <option>30</option>
+   <option>32</option>
+   </select>
+   </div>
+   
+   </div>
+   
+   <div class="tab">
+   <!-- theme inbuilt
+   themes 7 only-->
+   <div id="setting">
+   <p>change theme</p>
+   </div>
+   <div id="value">
+   <select>
+   <option>Ambiance</option>
+   <option>Dracula</option>
+   <option>Textmate</option>
+   <option>Tomorrow</option>
+   <option>xcode</option>
+   <option>GitHub</option>
+   <option>Monokai</option>
+   <option>Terminal</option>
+   <option>Twilight</option>
+   <option>Eclipse</option>
+   </select>
+   </div>
+   
+   </div>
+   
+   <div class="tab">
+   <!-- soundsb choose to
+    allow sound -->
+    <div id="setting">
+    <p>allow sound</p>
+    </div>
+    <div id="value">
+    <button>yes</button>
+    </div>
+    
+    </div>
+   
+   <div class="tab">
+   <!-- install plugins for theming, 
+   code snippets and other
+    functionalities that can
+    be channelled through
+    key events.
+ -->
+ 
+ <div id="setting">
+ <p>plugins store</p>
+ </div>
+ <div id="value">
+ <button>open</button>
+ </div>
+ 
+ </div>
+   
+   <div class="tab">
+   <!-- vim, emac or sublime key
+    binding chooce -->
+    <div id="setting">
+    <p>choose binding</p>
+    </div>
+    <div id="value">
+    <select>
+    <option>vim</option>
+    <option>vscode</option>
+    <option>emac</option>
+    <option>Eclipse</option>
+    </select>
+    </div>
+    
+    </div>
+   
+  
+  <div class="article">
+  The novem code editor is light-weight
+  but yet powerful code editor built with
+  the javascript uiedbook and 
+  ace libraries.
+  </div>
+   </div>
+</div>
+<!--
+The novem code editor
+ui makeup
+ -->
+
+
+<div class="novem_global_container" id="global">
+<div class="pipe" id="pipe">
+
+<div class="status-bar" >
+ <div class="status" id="status">
+ <!--<input type="checkbox" id="morecheck">
+ -->
+ <div id="doc"> <span class="logo">Novem Code</span>
+  <label id="tabb">
+  <div class="ball yuy1"></div>
+  <div class="ball yuy2"></div>
+  <input type="color" id="des">
+  <div class="ball yuy3"></div>
+ </label>
+   <p id="doc-title" contenteditable="true" placeholder="file name" ><span contenteditable="false">|</span> novem.html</p>
+   <p id="more">...
+   <div class="shadow"  id="shadow">
+   <p>open file
+   <label class="ccc" >
+   <input type="file" id="fli">
+   </label>
+   </p>
+   <p>search</p>
+   <p>rename</p>
+   <p>beautify</p>
+   <p>import rep</p>
+   <p id="settings">settings</p>
+   <p>privacy policy</p>
+   <p id="save">save</p>
+   <p id="do">
+   <span class="do">undo</span>|
+   <span class="do">redo</span>
+   </p>
+   </div>
+   </p>
+   </div>
+  
+  
+   <div id="menu">
+   <p id="klicker">|||</p>
+   <div id="content" class="content" >
+   <p id="options">novem.c |c++
+
+   </p>
+   <p id="options">novem.html |html</p>
+   <p id="options">novem.js |javascript</p>
+   <p id="options">novem.css |css</p>
+   <p id="options">novem.sh |shell</p>
+   <p id="options">novem.ts |type script</p>
+   </div>
+
+
+
+<div class="merge">
+ <span class="plates" ><></span>
+ <span class="plates" >~</span>
+ <span class="plates" >{}</span>
+ <span class="plates" >()</span>
+ <span class="plates" >[]</span>
+ <span class="plates" >;</span>
+ <span class="plates" >-</span>
+ <span class="plates" >&</span>
+ <span class="plates" >""</span>
+ <span class="plates" >=</span>
+ <span class="plates" >:</span>
+ <span class="plates" >_</span>
+ <span class="plates" >%</span>
+ <span class="plates" >/</span>
+ <span class="plates" >*</span>
+ <span class="plates" >+</span>
+ <span class="plates" >!</span>
+ <span class="plates" >?</span>
+ <span class="plates" >.</span>
+ <span class="plates" >``</span>
+ <span class="plates" >''</span>
+ <span class="plates" >$</span>
+ <span class="plates" >^</span>
+ </div>
+
+
+
+   </div>
+ </div>
+ 
+ 
+ <div class="tab-container">
+ <div id="editor"></div>
+ </div>
+</div>
+
+</div>
+</div>
+</body>
+</html>
